@@ -4,7 +4,7 @@ import { atom } from "recoil";
 
 export const optionSelected = atom({
     key : "optionSelected",
-    default: 1,
+    default: 0,
 });
 
 export const Users =atom({

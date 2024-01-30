@@ -46,7 +46,7 @@ router.post('/signup',async(req,res)=>{
           }
     }
     else{
-        res.status(411).json({"msg":"Validation Error..Please make sure to enter valid credentials",status:false})
+        res.status(411).json({"msg":"Validation Error...Each Field length is more than 6..Please make sure to enter valid credentials",status:false})
     }
 
 });
@@ -59,7 +59,7 @@ router.post('/signin',async(req,res)=>{
       bcrypt.compare(input.password,crct_password).then((match)=>{
         if(match){
           const token = jwt.sign({userId: check._id},JWT_SECRET);
-          res.status(200).json({token:token,username:check.username });
+          res.status(200).json({token:token,username:check.username,"msg":"Log in Successful" });
         }
         else{
           res.status(411).json({"msg" : "Wrong Password Entered"});
@@ -73,6 +73,7 @@ router.post('/signin',async(req,res)=>{
 });
 router.put("/",Auth,async(req,res)=>{
   const parser = req.body;
+ 
   const Validate = UpdateValidation.safeParse(parser);
   if(!Validate.success){
      res.status(413).json({"msg" : "password is too small"});

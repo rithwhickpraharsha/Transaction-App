@@ -48,6 +48,19 @@ const AccountSchema = new mongoose.Schema({
         default : 0,
         required:true,
     }
-})
+});
+
+const TransactionSchema = new mongoose.Schema({
+    Sender: String,
+    Receiver : String,
+    Sender_username:String,
+    Receiver_username:String,
+    Amount : Number,
+    Status : String,
+    
+},{
+    timestamps:true,
+});
+const Transactions = mongoose.model('Transactions',TransactionSchema);
 const Account = mongoose.model('accounts',AccountSchema);
-module.exports = {UserModel,Account};
+module.exports = {UserModel,Account,Transactions};
