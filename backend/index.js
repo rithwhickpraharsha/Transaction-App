@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const app = express();
 app.use(cors({
-    origin:["https://transaction-app-jade.vercel.app"]
+    origin:["https://transaction-app-jade.vercel.app","http://localhost:5173"]
 }));
 app.use(bodyParser.json());
 
