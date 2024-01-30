@@ -14,12 +14,12 @@ export default function Content(){
     const token = JSON.parse(localStorage.getItem('paytm-app-basic')).token;
     useEffect(()=>{
       async function get_balance(){
-       const response = await axios.get('http://localhost:3000/api/v1/account/balance',{headers:{Authorization:`Bearer ${token}`}});
+       const response = await axios.get('https://transactions-app-backend.onrender.com/api/v1/account/balance',{headers:{Authorization:`Bearer ${token}`}});
        setBalance(response.data.balance);
        setLoad1(false);
       }
       async function get_payments(){
-        const response = await axios.get('http://localhost:3000/api/v1/account/payments',{headers:{Authorization:`Bearer ${token}`}});
+        const response = await axios.get('https://transactions-app-backend.onrender.com/api/v1/account/payments',{headers:{Authorization:`Bearer ${token}`}});
         setPayments(response.data.payments);
         setLoad2(false);
        }

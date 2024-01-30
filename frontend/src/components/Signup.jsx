@@ -27,7 +27,7 @@ export default function Signup(){
 
          try{
           setLoad(true);
-          const res = await axios.post("http://localhost:3000/api/v1/user/signup",{username:username,firstName:firstName,lastName:lastName,password:password});
+          const res = await axios.post("https://transactions-app-backend.onrender.com/api/v1/user/signup",{username:username,firstName:firstName,lastName:lastName,password:password});
           const token = res.data.userId;
           setLoad(false);
           handleSucessSubmit();

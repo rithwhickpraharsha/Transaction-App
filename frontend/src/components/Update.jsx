@@ -27,7 +27,7 @@ export default function Update(){
 
         try{
             setLoad(true);
-         const res = await axios.put("http://localhost:3000/api/v1/user/",{firstName:firstName,lastName:lastName,password:password},{headers:{Authorization:`Bearer ${JSON.parse(localStorage.getItem('paytm-app-basic')).token}`}});
+         const res = await axios.put("https://transactions-app-backend.onrender.com/api/v1/user/",{firstName:firstName,lastName:lastName,password:password},{headers:{Authorization:`Bearer ${JSON.parse(localStorage.getItem('paytm-app-basic')).token}`}});
          console.log(res.data);
          setLoad(false);
          handleSucessSubmit();

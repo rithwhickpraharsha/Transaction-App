@@ -10,7 +10,7 @@ export default function Transactions(){
       
     async function get_transactions(){
         try{
-       const response = await axios.post('http://localhost:3000/api/v1/account/transactions',{},{headers:{Authorization: `Bearer ${JSON.parse(localStorage.getItem('paytm-app-basic')).token}`}});
+       const response = await axios.post('https://transactions-app-backend.onrender.com/api/v1/account/transactions',{},{headers:{Authorization: `Bearer ${JSON.parse(localStorage.getItem('paytm-app-basic')).token}`}});
         setLoad1(false);
         setTransactions(response.data.transactions);
        

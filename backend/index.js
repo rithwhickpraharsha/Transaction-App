@@ -3,7 +3,9 @@ const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin:"https://transaction-app-jade.vercel.app/"
+}));
 app.use(bodyParser.json());
 
 const user = require("./routes/userRouter");

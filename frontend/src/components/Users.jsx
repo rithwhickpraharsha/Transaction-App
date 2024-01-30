@@ -16,7 +16,7 @@ export default function Customers(){
     const navigate = useNavigate();
     useEffect(()=>{
         async function load_users(){
-          const response = await axios.get(`http://localhost:3000/api/v1/user/bulk?filter=${search_text}`,{headers:{Authorization:`Bearer ${user_data.token}`}});
+          const response = await axios.get(`https://transactions-app-backend.onrender.com/api/v1/user/bulk?filter=${search_text}`,{headers:{Authorization:`Bearer ${user_data.token}`}});
           setUsers(response.data.users);
           setLoad(false);
         

@@ -27,7 +27,7 @@ async function Make_Payment(){
             handleSubmitError("Amount should be less than 1,00,000");
               return;
         }
-    const response = await axios.post('http://localhost:3000/api/v1/account/transfer',{to:id,amount:amount},{headers:{Authorization:`Bearer ${JSON.parse(localStorage.getItem('paytm-app-basic')).token}`}});
+    const response = await axios.post('https://transactions-app-backend.onrender.com/api/v1/account/transfer',{to:id,amount:amount},{headers:{Authorization:`Bearer ${JSON.parse(localStorage.getItem('paytm-app-basic')).token}`}});
     console.log(response);
     handleSucessSubmit();
     setTimeout(()=>{navigate('/dashboard')},2000);
