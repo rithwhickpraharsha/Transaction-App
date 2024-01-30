@@ -90,6 +90,7 @@ router.put("/",Auth,async(req,res)=>{
 })
 
 router.get('/bulk',Auth,async(req,res)=>{
+  console.log(req);
   let filter =  req.query.filter || '';
   filter = new RegExp(filter,'i');
   const users = await UserModel.find({
