@@ -12,11 +12,11 @@ function App() {
   return (
    <Router>
    <Routes>
-  <Route exact path='/signup' element = {<RecoilRoot><Signup/></RecoilRoot>}/>
-  <Route exact path='/' element = {<RecoilRoot><Signin/></RecoilRoot>}/>
-  <Route exact path='/dashboard' element = {<RecoilRoot><Dashboard/></RecoilRoot>}/>
-  <Route exact path ='/payment' element= {<RecoilRoot><Payment/></RecoilRoot> } />
-  <Route exact path ='/update' element= {<RecoilRoot><Update/></RecoilRoot> } />
+  <Route  path='/signup' element = {<RecoilRoot><Signup/></RecoilRoot>}/>
+  <Route  path='/' element = {<RecoilRoot><Signin/></RecoilRoot>}/>
+  <Route  path='/dashboard' element = {<RecoilRoot><Dashboard/></RecoilRoot>}/>
+  <Route  path ='/payment' element= {<RecoilRoot><Payment/></RecoilRoot> } />
+  <Route  path ='/update' element= {<RecoilRoot><Update/></RecoilRoot> } />
    </Routes>
    </Router>
   )
