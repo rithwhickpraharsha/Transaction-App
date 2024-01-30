@@ -16,7 +16,7 @@ export default function Update(){
     const [load,setLoad] = useState(false);
     function handleSucessSubmit(){
         console.log("Toast Sucess");
-     return toast.success('Log in Successful!');
+     return toast.success('Updated Successful!');
       };
   
       function handleSubmitError(e){
