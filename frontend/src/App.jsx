@@ -7,6 +7,7 @@ import Payment from './components/Payment';
 import { Suspense, useEffect,useState } from 'react';
 import axios from 'axios';
 import Update from './components/Update';
+import Sidebar_Sample from './components/ui_components/Sidebar_Sample';
 function App() {
 
   return (
@@ -21,7 +22,7 @@ function App() {
    </Router>
   )
 
-  
+
  
 }
 

@@ -1,6 +1,6 @@
 import { RecoilRoot, useRecoilState, useRecoilValue } from "recoil";
 import Sidebar from "./ui_components/Sidebar";
-import { optionSelected } from "./states/SidebarStates";
+import { extendes, optionSelected } from "./states/SidebarStates";
 import Content from "./Contents";
 import { useEffect } from "react";
 import Transactions from "./Transactions";
@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 export default function Dashboard(){
  const option = useRecoilValue(optionSelected);
  const navigate = useNavigate();
+ const extended = useRecoilValue(extendes);
  useEffect(()=>{
     const item = localStorage.getItem('paytm-app-basic');
    
@@ -21,9 +22,9 @@ export default function Dashboard(){
     },[]);
 return(
    
-    <div className="flex">
+    <div className="flex h-screen overflow-auto">
     <Sidebar />
-    <div className="sm:ml-64 w-full">
+    <div className={`${extended ? `sm:ml-[230px]` : 'ml-[100px]' } w-full`}>
      {
         (option == 0)?<Welcome/>:(option == 1)? <Content/> : ((option == 2)? <Customers/> : ((option == 5)?<Transactions /> : <Content />))
      }

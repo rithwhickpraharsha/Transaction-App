@@ -17,6 +17,10 @@ export const Search_text = atom({
     default:""
 });
 
+export const extendes = atom({
+    key:"extendes",
+    default:true
+})
 
 
 
