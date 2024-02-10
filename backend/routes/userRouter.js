@@ -15,7 +15,7 @@ router.post('/signup',async(req,res)=>{
             const username = parser.username;
             
           const resp = await UserModel.findOne({username:username});
-         console.log(resp);
+         
           if(!resp){
             bcrypt.genSalt(SALT).then((salt)=>{
               return bcrypt.hash(parser.password,salt);
