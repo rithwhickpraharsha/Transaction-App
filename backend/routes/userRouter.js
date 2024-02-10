@@ -89,6 +89,7 @@ router.put("/",Auth,async(req,res)=>{
 
 })
 router.post("/verify",Auth,async(req,res)=>{
+  console.log("Verfication Started");
 const id = req.userId;
 const result = await UserModel.findOne({_id:id});
 const pass = req.body.password;
@@ -104,7 +105,7 @@ else{
 }
 }
 catch(err){
-  console.log("Password cverify payment error");
+  console.log("Password verify payment error");
   console.log(err);
 }
 
