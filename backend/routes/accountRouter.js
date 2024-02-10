@@ -20,6 +20,7 @@ router.post('/transfer',Auth,async (req,res)=>{
     try{
         const session = await mongoose.startSession();
     await session.startTransaction();
+    
     const account_from = await Account.findOne({userId : from_acc}).session(session);
     const sender = await UserModel.findOne({_id:from_acc});
     const receiver = await UserModel.findOne({_id:to_Acc});
@@ -27,7 +28,7 @@ router.post('/transfer',Auth,async (req,res)=>{
         await Transactions.create({Sender:from_acc,Receiver:to_Acc,Sender_username:sender.username,Receiver_username:receiver.username,Amount:amount,Status:"Failure"});
 
          await session.abortTransaction();
-        res.status(400).json({"msg" : "Invalid Account"});
+        res.status(400).json({"msg" : "Invalid Sender"});
         return;
 
     }
@@ -42,7 +43,8 @@ router.post('/transfer',Auth,async (req,res)=>{
     
     if(!to_account){
        await session.abortTransaction();
-      res.status(400).json({"msg" : "Invalid Account"});
+      
+      res.status(400).json({"msg" : "Invalid Receiver"});
         return;
     }
     await Account.updateOne({userId: from_acc},{$inc : {balance: -amount}}).session(session);

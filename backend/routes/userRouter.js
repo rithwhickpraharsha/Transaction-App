@@ -88,7 +88,28 @@ router.put("/",Auth,async(req,res)=>{
   })
 
 })
+router.post("/verify",Auth,async(req,res)=>{
+const id = req.userId;
+const result = await UserModel.findOne({_id:id});
+const pass = req.body.password;
 
+try{
+const match = await bcrypt.compare(pass,result.password);
+
+if(match){
+  res.status(200).json({"msg":"Password verified"});
+}
+else{
+  res.status(413).json({"msg":"Incorrect Password"});
+}
+}
+catch(err){
+  console.log("Password cverify payment error");
+  console.log(err);
+}
+
+
+});
 router.get('/bulk',Auth,async(req,res)=>{
   console.log(req);
   let filter =  req.query.filter || '';
