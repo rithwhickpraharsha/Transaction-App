@@ -85,6 +85,9 @@ let transaction_converted = transactions.map((transaction)=>{
       Time: new Intl.DateTimeFormat('en-IN', timeFormatOptions).format(istDate),
     };
 });
+
+transaction_converted.sort((a, b) => new Date(b._doc.createdAt) - new Date(a._doc.createdAt));
+
 res.status(200).json({
     transactions:transaction_converted
 })

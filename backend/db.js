@@ -61,6 +61,34 @@ const TransactionSchema = new mongoose.Schema({
 },{
     timestamps:true,
 });
+const participantSchema = new mongoose.Schema({
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:UserModel,
+        required:true
+    },
+    username:{
+        type:String,
+        required:true
+    }
+})
+const groupSchema = new mongoose.Schema({
+    name:String,
+    Creator: participantSchema,
+    participants:[participantSchema]
+});
+
+const paySchema = new mongoose.Schema({
+    sender: participantSchema,
+    borrowers:[participantSchema],
+    amount: Number,
+    description:String,
+},{
+    timestamps:true
+});
+
+const PayRequest = mongoose.model('PayRequests',paySchema);
+const Group = mongoose.model('groups',groupSchema);
 const Transactions = mongoose.model('Transactions',TransactionSchema);
 const Account = mongoose.model('accounts',AccountSchema);
-module.exports = {UserModel,Account,Transactions};
+module.exports = {UserModel,Account,Transactions,Group,PayRequest};
