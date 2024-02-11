@@ -29,49 +29,49 @@ export default function Sidebar(){
 <ul className="m-3 mt-5">
     <li className="m-3 flex mt-8 hover:bg-blue-700 rounded-md">
       <div onClick={()=>{setOption(1)}}>
-    <svg class="w-5 h-5 mr-3 mb-5  text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21" >
+    <svg class="w-5 h-5 mr-3 mb-5 mt-4  text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21" >
       <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
       <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
    </svg>
    </div>
-        <a href="#" className={`font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(1)}}>Dashboard</a>
+        <button className={`font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(1)}}>Dashboard</button>
     </li>
     <li className="m-3 flex mt-8 hover:bg-blue-700 rounded-md">
     <div onClick={()=>{setOption(2)}}>
-    <svg class="flex-shrink-0 w-5 h-5 mb-5  mr-3 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+    <svg class="flex-shrink-0 w-5 h-5 mb-5 mt-4 mr-3 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
       <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
    </svg>
    </div>
-   <a href="#" className={`font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(2)}}>Pay</a>
+   <button className={`font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(2)}}>Pay</button>
    
     </li>
     <li className="m-3 flex mt-8 `hover:bg-blue-700 rounded-md">
     <div onClick={()=>{setOption(5)}} className="hover:bg-blue-700">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3 mt-2">
    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
    </svg>
     </div>
-   <a href="#" className={`hover:bg-blue-700 font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(5);}}>Transactions</a>
+   <button className={`hover:bg-blue-700 font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(5);}}>Transactions</button>
  
     </li>
     <li className="m-3 flex mt-8 `hover:bg-blue-700 rounded-md">
     <div onClick={()=>{setOption(6)}} className="hover:bg-blue-700">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2 mt-1">
     <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
     </svg>
 
     </div>
-   <a href="#" className={`hover:bg-blue-700 font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(6);}}>Groups</a>
+   <button className={`hover:bg-blue-700 font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(6);}}>Groups</button>
  
     </li>
     <li className="m-3 flex mt-8 `hover:bg-blue-700 rounded-md">
     <div onClick={()=>{setOption(7)}} className="hover:bg-blue-700">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3 mt-1">
     <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
     </svg>
 
     </div>
-   <a href="#" className={`hover:bg-blue-700 font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(7);}}>Requests</a>
+   <button className={`hover:bg-blue-700 font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(7);}}>Requests</button>
  
     </li>
 </ul>
