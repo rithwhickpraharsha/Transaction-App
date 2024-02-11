@@ -26,7 +26,7 @@ return(
    
     <div className="flex h-screen overflow-auto">
     <Sidebar />
-    <div className={`${extended ? `sm:ml-[230px]` : 'ml-[100px]' } w-full`}>
+    <div className={`${extended ? `sm:ml-[260px]` : 'ml-[100px]' } w-full`}>
      {
         (option == 0)?<Welcome/>:(option == 1)? <Content/> : ((option == 2)? <Customers/> : ((option == 5)?<Transactions /> :((option == 6)? <Groups /> : ((option == 7)?<Notifications/> :<Content />))))
      }
