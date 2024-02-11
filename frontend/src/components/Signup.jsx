@@ -63,7 +63,7 @@ if(item){
        
       <div className="flex justify-center"> <button className="h-8 w-44 text-xl bg-green rounded-xl m-6" onClick={()=>{Submit()}}>{(load)?"Loading ..." : "Create Account"}</button></div>
       <div className="flex justify-center">
-        Already has an account? Please  <Link to = "/signin" className="ml-1  text-black bg-green rounded-md px-2" >Login</Link>
+        Already has an account? Please  <Link to = "/" className="ml-1  text-black bg-green rounded-md px-2" >Login</Link>
       </div>
      
       </div>
