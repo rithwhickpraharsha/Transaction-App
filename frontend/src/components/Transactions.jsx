@@ -39,7 +39,7 @@ if(!item){
             
             </div>
             <div className="flex justify-around text-white text-xl md:text-2xl">
-                <h1 className="w-[200px] mx-2">Sender</h1>
+                <h1 className="w-[200px] mx-4">Sender</h1>
                 <h1 className="w-[200px] mx-2">Receiver</h1>
                 <h1 className="w-[200px] mx-2" >Amount</h1>
                 <h1 className="w-[200px] mx-2">Status</h1>
@@ -50,7 +50,7 @@ if(!item){
             {(load1)? <div className="h-full w-full text-3xl text-white flex justify-center items-center">Loading ...</div>:<ul className="list-none p-0 m-0 ">
                     {transactions.map((transaction, index) => (
                     <li key={index} className="flex justify-around items-center text-black md:text-xl h-auto w-auto bg-green m-2 rounded-xl">
-                        <div className="w-[200px] mx-2">{transaction._doc.Sender_username}</div>
+                        <div className="w-[200px] mx-4">{transaction._doc.Sender_username}</div>
                         <div className="w-[200px] mx-2">{transaction._doc.Receiver_username}</div>
                         <div className="w-[200px] mx-2">{transaction._doc.Amount}</div>
                         <div className="w-[200px] mx-2">{(transaction._doc.Status) == 'Successful' ? <div className="h-auto bg-darkgreen rounded-lg p-2">Success</div> : <div className="h-auto bg-red-700 rounded-lg p-2">Failed</div>}</div>

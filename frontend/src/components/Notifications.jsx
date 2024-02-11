@@ -31,13 +31,13 @@ export default function Notifications(){
             </div>
             <div className="border  border-black border-x-2 shadow-lg"></div>
             <div className="flex justify-between m-3">
-                <div className="text-2xl text-white w-[20vw]">
+                <div className="text-2xl text-white w-[20vw] mx-3">
                     Sender
                 </div>
-                <div className="text-2xl text-white w-[50vw] ">
+                <div className="text-2xl text-white w-[50vw] mx-3">
                     Description
                 </div>
-                <div className="text-2xl text-white w-[10vw]">
+                <div className="text-2xl text-white w-[10vw] mx-3">
                     Pay
                 </div>
             </div>
@@ -48,13 +48,13 @@ export default function Notifications(){
                         if(request != null){
                             return(
                                 <li key={i} className="flex justify-between m-3 bg-green rounded-lg">
-                                    <div className="text-xl lg:text-2xl w-[20vw] flex items-center overflow-auto    ">
+                                    <div className="text-xl lg:text-2xl w-[20vw] flex items-center overflow-auto   mx-3">
                                         {request.creator.username}
                                     </div>
-                                    <div className="text-xl w-[50vw] flex items-center overflow-auto">
+                                    <div className="text-xl w-[50vw] flex items-center overflow-auto mx-3">
                                         {request.description}
                                     </div>
-                                    <div className="w-[20vw] flex items-center p-3 justify-center">
+                                    <div className="w-[20vw] flex items-center p-3 justify-center mx-3">
                                         <button className="h-auto w-auto p-3 bg-violet-900 rounded-lg hover:bg-darkgreen text-white" onClick={()=>{navigate(`/Requestpay?id=${request.creator.userId}&user=${request.creator.username}&amount=${request.amount}`)}}>Pay {request.amount}</button>
                                     </div>
                                 </li>
