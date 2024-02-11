@@ -77,7 +77,7 @@ export default function Display_group(){
                       Participants
                 </div>
                 <div className="h-64 overflow-auto">
-                    {(load) ? <div className="text-3xl text-white">Loading ....</div>:
+                    {(load) ? <div className="text-3xl">Loading ....</div>:
                 <ul>
                 {
                   group.participants.map((user,i)=>{
