@@ -7,6 +7,8 @@ import Transactions from "./Transactions";
 import Customers from "./Users";
 import Welcome from "./Welcome";
 import { useNavigate } from "react-router-dom";
+import Groups from "./Groups";
+import Notifications from "./Notifications";
 
 
 export default function Dashboard(){
@@ -26,7 +28,7 @@ return(
     <Sidebar />
     <div className={`${extended ? `sm:ml-[230px]` : 'ml-[100px]' } w-full`}>
      {
-        (option == 0)?<Welcome/>:(option == 1)? <Content/> : ((option == 2)? <Customers/> : ((option == 5)?<Transactions /> : <Content />))
+        (option == 0)?<Welcome/>:(option == 1)? <Content/> : ((option == 2)? <Customers/> : ((option == 5)?<Transactions /> :((option == 6)? <Groups /> : ((option == 7)?<Notifications/> :<Content />))))
      }
     </div>
     </div>
