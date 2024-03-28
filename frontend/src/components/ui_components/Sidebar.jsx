@@ -74,6 +74,21 @@ export default function Sidebar(){
    <a href="#" className={`hover:bg-blue-700 font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={()=>{setOption(7);}}>Requests</a>
  
     </li>
+    <li className="m-3 flex mt-8 `hover:bg-blue-700 rounded-md">
+    <div onClick={(e)=>{localStorage.removeItem('paytm-app-basic');
+    setTimeout(()=>{navigate("/");},2000);
+    toast.success('Logged out Successfully!')}} className="hover:bg-red-700 mr-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9" />
+    </svg>
+
+
+    </div>
+   <a href="#" className={`hover:bg-red-700 font-serif text-xl ${!extend ? 'overflow-hidden w-0' :'w-auto'}`} onClick={(e)=>{localStorage.removeItem('paytm-app-basic');
+    setTimeout(()=>{navigate("/");},2000);
+    toast.success('Logged out Successfully!')}}>Logout</a>
+ 
+    </li>
 </ul>
 
 
