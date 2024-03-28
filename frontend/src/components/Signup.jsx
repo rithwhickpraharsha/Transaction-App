@@ -56,9 +56,9 @@ if(item){
         Create Account
        </div>
 
-       <input className="w-auto h-12  rounded-lg m-5 border-black"  placeholder="    Username " onChange={(e)=>{setUsername(e.target.value); setLoad(false)}}/>
-       <input className="w-auto h-12  rounded-lg m-5 border-black"  placeholder="    First Name " onChange={(e)=>{setFirstName(e.target.value); setLoad(false)}}/>
-       <input  className="w-auto h-12  rounded-lg m-5 border-black"  placeholder="    Last Name "onChange={(e)=>{setLastName(e.target.value); setLoad(false)}} />
+       <input  className="w-auto h-12  rounded-lg m-5 border-black"  placeholder="    Username " onChange={(e)=>{setUsername(e.target.value); setLoad(false)}} required/>
+       <input className="w-auto h-12  rounded-lg m-5 border-black"  placeholder="    First Name " onChange={(e)=>{setFirstName(e.target.value); setLoad(false)}} required/>
+       <input  className="w-auto h-12  rounded-lg m-5 border-black"  placeholder="    Last Name "onChange={(e)=>{setLastName(e.target.value); setLoad(false)}} required />
        <input type = "password" className="w-auto h-12  rounded-lg m-5 border-black"  placeholder="    password " onChange={(e)=>{setPassword(e.target.value); setLoad(false)}}/>
        
       <div className="flex justify-center"> <button className="h-8 w-44 text-xl bg-green rounded-xl m-6" onClick={()=>{Submit()}}>{(load)?"Loading ..." : "Create Account"}</button></div>

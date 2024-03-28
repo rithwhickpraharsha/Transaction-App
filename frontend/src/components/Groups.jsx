@@ -35,7 +35,7 @@ export default function Groups(){
                 groups.map((group)=>{
                     return (
                         <button className="h-48 w-52 rounded-lg m-3 bg-green flex justify-center items-center text-2xl hover:bg-blue-700" onClick={()=>{navigate(`/group/show?groupId=${group.group_id}`)}}>
-                            {group.name}
+                            {group?.name}
                         
                         </button>
                     )

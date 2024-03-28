@@ -36,7 +36,7 @@ group_router.get("/crews",Auth,async(req,res)=>{
                 return {group_id:group._id,name:group.name};
             }
         }
-    });
+    }).filter(value => value !== undefined && value !== null);
 
     
     res.status(200).json({
